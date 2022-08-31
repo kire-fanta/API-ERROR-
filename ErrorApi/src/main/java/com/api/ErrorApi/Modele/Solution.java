@@ -17,7 +17,7 @@ public class Solution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(length = 58)
+
     private String description;
     @Column(length = 158)
     private int temps;

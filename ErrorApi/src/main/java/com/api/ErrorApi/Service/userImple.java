@@ -47,4 +47,9 @@ public class userImple implements userService{
         ur.deleteById(id);
         return  "supp";
     }
+
+    @Override
+    public user trouverUserParEmail(String email) {
+        return ur.findByEmail(email);
+    }
 }

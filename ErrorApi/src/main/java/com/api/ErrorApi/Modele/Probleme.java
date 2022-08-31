@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "problème")
-@Data
 @Setter
 @Getter
 @AllArgsConstructor
@@ -24,6 +23,9 @@ public class Probleme {
     private String technologie;
     private String methodologie;
     private String etats;
+
+    @ManyToOne
+    private user user;
 
 
 

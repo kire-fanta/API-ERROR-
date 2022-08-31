@@ -13,4 +13,6 @@ user creer_solution(user userservice);
 user ajouter_user(user userservice);
 String SuppUser(int iduser);
 
+user trouverUserParEmail(String email);
+
 }

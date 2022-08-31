@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class SolutionController {
 
-
+    @Autowired
     private final SolutionService solutionService;
     @PostMapping("/create")
     public Solution create(@RequestBody Solution solution) {
