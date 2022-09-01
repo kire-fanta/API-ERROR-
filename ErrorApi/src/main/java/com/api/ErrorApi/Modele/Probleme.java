@@ -17,7 +17,7 @@ public class Probleme {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 58)
-    private String Titre;
+    private String titre;
     @Column(length = 158)
     private String description;
     private String technologie;
@@ -26,8 +26,6 @@ public class Probleme {
 
     @ManyToOne
     private user user;
-
-
 
 
 }

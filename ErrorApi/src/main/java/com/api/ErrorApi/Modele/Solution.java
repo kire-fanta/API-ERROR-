@@ -22,5 +22,9 @@ public class Solution {
     @Column(length = 158)
     private int temps;
     private String ressources;
+
+    @OneToOne
+    @JoinColumn(name = "id")
+    private Probleme probleme;
 }
 

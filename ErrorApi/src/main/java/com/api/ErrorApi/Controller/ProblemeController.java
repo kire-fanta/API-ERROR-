@@ -16,9 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 public class ProblemeController {
 
-    @Autowired
     private final ProblemeService problemeService;
-    @Autowired
+
+
     private final userService  userService1;
 
     @PostMapping("/create/{email}/{pass}")

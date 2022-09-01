@@ -20,7 +20,7 @@ public class ControllerUser {
         public user creation(@RequestBody user User){
             return  us.creer_compte(User);
         }
-        @DeleteMapping("/supprimer/{iduser}")
+        @DeleteMapping("/supprimer/{id}")
         public String supprimer(@PathVariable ("id") int id) {
             return us.SuppUser(id);
         }
