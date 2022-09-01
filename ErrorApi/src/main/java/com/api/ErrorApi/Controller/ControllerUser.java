@@ -15,7 +15,7 @@ public class ControllerUser {
 
         @Autowired
         private userService us;
-        @PostMapping("create/{id}/{nom}")
+        @PostMapping("/create")
 
         public user creation(@RequestBody user User){
             return  us.creer_compte(User);

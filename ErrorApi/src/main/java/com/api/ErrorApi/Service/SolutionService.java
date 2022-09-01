@@ -10,8 +10,13 @@ public interface SolutionService {
 
     List<Solution> lire();
 
-    Solution modifier(int id, Solution solution);
-    String supprimer(int id);
+    Solution modifier(Long id, Solution solution);
+    /*String supprimer(Long id);*/
 
 
+    String supprimer(long id);
+
+    /*Solution modifier(int id, Solution solution);
+
+    String supprimer(int id);*/
 }

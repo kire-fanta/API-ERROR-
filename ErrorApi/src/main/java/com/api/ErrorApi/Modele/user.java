@@ -15,7 +15,7 @@ public class user {
     private int id;
     private  String nom;
     private String prenom;
-    private long numero;
+    //private long numero;
     private String Email;
     private String password;
     private int contact;

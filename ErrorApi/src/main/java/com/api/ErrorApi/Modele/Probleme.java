@@ -26,6 +26,8 @@ public class Probleme {
     private String etats;
 
 
+    @ManyToOne
+    private user user;
 
 
 }

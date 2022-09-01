@@ -35,7 +35,9 @@ public class ProblemeController {
 
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable Long id) {
+
         return problemeService.supprimer(id);
+
     }
 
 }

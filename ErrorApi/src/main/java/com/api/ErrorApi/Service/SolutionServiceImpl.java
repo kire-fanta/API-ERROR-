@@ -23,20 +23,19 @@ public class SolutionServiceImpl implements SolutionService{
     }
 
     @Override
-    public Solution modifier(int id, Solution solution) {
-        return solutionRepository.findById((long) id)
-                .map(p-> {
-                    p.setDescription(solution.getDescription());
-                    p.setTemps(solution.getTemps());
-                    p.setRessources(solution.getRessources());
-                    return solutionRepository.save(p);
-
-                }).orElseThrow(() -> new RuntimeException("Solution non trouvé !"));
+    public Solution modifier(Long id, Solution solution) {
+        return solutionRepository.findById(id)
+                .map(s-> {
+                    s.setDescription(s.getDescription());
+                    s.setRessources(s.getRessources());
+                    s.setTemps(s.getTemps());
+                    return solutionRepository.save(s);
+                }).orElseThrow(() ->new RuntimeException("solution non trouver !"));
     }
 
     @Override
-    public String supprimer(int id) {
+    public String supprimer(long id) {
         solutionRepository.deleteById(id);
-        return "Solution supprimer !";
+        return "solution supprimé";
     }
 }

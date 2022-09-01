@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class Solution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(length = 58)
     private String description;
     @Column(length = 158)

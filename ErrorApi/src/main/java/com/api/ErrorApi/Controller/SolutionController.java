@@ -25,14 +25,16 @@ public class SolutionController {
         return solutionService.lire();
     }
     @PutMapping("/update/{id}")
-    public Solution update(@PathVariable int id, @RequestBody Solution solution){
+    public Solution update(@PathVariable long id, @RequestBody Solution solution){
         return solutionService.modifier(id, solution);
 
     }
 
-    @DeleteMapping("/delete")
-    public String delete(@PathVariable int id){
-        return solutionService.supprimer(id);
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable Long id){
+     solutionService.supprimer(id);
+        return "Supprimer avec succès";
+
     }
 
 }
