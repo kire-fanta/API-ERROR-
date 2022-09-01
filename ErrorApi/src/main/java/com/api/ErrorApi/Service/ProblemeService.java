@@ -1,7 +1,7 @@
 package com.api.ErrorApi.Service;
 
 import com.api.ErrorApi.Modele.Probleme;
-import org.springframework.beans.factory.parsing.Problem;
+
 
 import java.util.List;
 public interface ProblemeService {
@@ -14,6 +14,10 @@ public interface ProblemeService {
 
     String supprimer(Long id);
 
+    Probleme trouverProblemeParId(Long id) ;
+
+    Probleme touverProblemeParTitre(String titre) ;
+    Object recherche_motcles(String mot_cle);
 
    // Probleme modifier(Long id, Probleme probleme);
 }

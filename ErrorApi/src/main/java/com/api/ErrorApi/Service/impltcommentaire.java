@@ -10,7 +10,6 @@ import java.util.List;
 
 @AllArgsConstructor
 @Service
-
 public class impltcommentaire implements commentaireService{
     @Autowired
     private final commentaireReposotory cp;

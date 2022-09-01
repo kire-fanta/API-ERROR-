@@ -1,35 +1,54 @@
 package com.api.ErrorApi.Service;
 
+import com.api.ErrorApi.Modele.Probleme;
+import com.api.ErrorApi.Modele.Solution;
 import com.api.ErrorApi.Modele.user;
+import com.api.ErrorApi.Repository.SolutionRepository;
 import com.api.ErrorApi.Reposotory.UserReposotory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class userImple implements userService{
 
-    @Autowired
-    private UserReposotory ur;
+
+    private final UserReposotory userReposotory;
+
+    private final SolutionRepository solutionRepository;
+
+
+   /* @Override
+    public Solution trouverSolutionParIdProbleme(Long idPro) {
+        return null;
+    }*/
+
+    @Override
+    public user trouverCompteParEmail(String email) {
+        return userReposotory.findByEmail(email);
+    }
+
     @Override
     public user creer_compte(user userservice) {
-        return ur.save(userservice);
+        return userReposotory.save(userservice);
     }
 
     @Override
     public user poser_probleme(user userservice) {
-        return ur.save(userservice);
+        return userReposotory.save(userservice);
     }
 
     @Override
     public List<user> Afficher_user() {
-        return ur.findAll();
+        return userReposotory.findAll();
     }
 
     @Override
     public user commenter(user userservice) {
-        return ur.save(userservice);
+        return userReposotory.save(userservice);
     }
 
     @Override
@@ -44,7 +63,34 @@ public class userImple implements userService{
 
     @Override
     public String SuppUser(int id) {
-        ur.deleteById(id);
-        return  "supp";
+        userReposotory.deleteById(id);
+        return "supprimer avec succès";
+    }
+
+
+    @Override
+    public user trouverUserParEmail(String email) {
+        return userReposotory.findByEmail(email);
+    }
+
+    @Override
+    public boolean Connexion(String email, String password) {
+        user user1 = userReposotory.findByEmail(email);
+        if (user1 != null && user1.equals(password)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public Solution creerSolution(Solution solution, Probleme prob) {
+        solution.setProbleme(prob);
+        return solutionRepository.save(solution);
+    }
+
+    @Override
+    public Solution trouverSolutionParIdProbleme(Long idPro) {
+        return solutionRepository.findById(idPro).get();
     }
 }
