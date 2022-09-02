@@ -20,11 +20,9 @@ public class user {
     private  String nom;
     private String prenom;
     //private long numero;
-<<<<<<< HEAD
-    private String Email;
-=======
+
     private String email;
->>>>>>> 37afce1de36853bcb19cabaccd0c5315a83ae23a
+
     private String password;
     private int contact;
 

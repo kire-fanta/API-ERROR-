@@ -16,11 +16,10 @@ public class ControllerUser {
 
         @Autowired
         private userService us;
-<<<<<<< HEAD
-=======
+
     @Autowired
     private UserReposotory  userReposotory;
->>>>>>> 37afce1de36853bcb19cabaccd0c5315a83ae23a
+
         @PostMapping("/create")
 
         public user creation(@RequestBody user User){

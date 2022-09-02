@@ -24,10 +24,7 @@ public class Probleme {
     private String methodologie;
     private String etats;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 37afce1de36853bcb19cabaccd0c5315a83ae23a
     @ManyToOne
     private user user;
 

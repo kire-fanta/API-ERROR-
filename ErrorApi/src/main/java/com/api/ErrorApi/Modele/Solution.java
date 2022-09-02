@@ -16,13 +16,12 @@ import javax.persistence.*;
 public class Solution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD
     private Long id;
     @Column(length = 58)
-=======
-    private int id;
 
->>>>>>> 37afce1de36853bcb19cabaccd0c5315a83ae23a
+
+
+
     private String description;
     @Column(length = 158)
     private int temps;
