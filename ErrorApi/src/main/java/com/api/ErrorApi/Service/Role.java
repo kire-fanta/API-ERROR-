@@ -10,5 +10,5 @@ public interface Role {
     role ajouter_role(role Role);
     List<role> Afficher();
 
-    Optional<role> findRole(int id);
+    Optional<role> findRole(Long id);
 }

@@ -29,7 +29,7 @@ public interface userService {
     user commenter(user userservice);
     user creer_solution(user userservice);
     user ajouter_user(user userservice);
-    String SuppUser(int id);
+    String SuppUser(Long id);
 
     user trouverUserParEmail(String email);
 

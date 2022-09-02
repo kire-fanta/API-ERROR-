@@ -51,5 +51,8 @@ public class ProblemeController {
         return problemeService.supprimer(id);
 
     }
-
+@GetMapping  ("/recherche/mot_cle")
+    public  Object recherche_motcles(String mot_cle){
+        return problemeService.recherche_motcles(mot_cle);
+}
 }

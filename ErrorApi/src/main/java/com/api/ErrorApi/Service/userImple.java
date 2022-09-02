@@ -62,7 +62,7 @@ public class userImple implements userService{
     }
 
     @Override
-    public String SuppUser(int id) {
+    public String SuppUser(Long id) {
         userReposotory.deleteById(id);
         return "supprimer avec succès";
     }

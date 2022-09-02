@@ -14,7 +14,7 @@ public interface SolutionService {
     /*String supprimer(Long id);*/
 
 
-    String supprimer(long id);
+    //String supprimer(Long id);
 
     /*Solution modifier(int id, Solution solution);
 

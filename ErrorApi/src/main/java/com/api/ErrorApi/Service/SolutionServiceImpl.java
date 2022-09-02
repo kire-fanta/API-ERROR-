@@ -33,9 +33,11 @@ public class SolutionServiceImpl implements SolutionService{
                 }).orElseThrow(() ->new RuntimeException("solution non trouver !"));
     }
 
-    @Override
+    /*@Override
     public String supprimer(long id) {
         solutionRepository.deleteById(id);
         return "solution supprimé";
     }
+
+     */
 }

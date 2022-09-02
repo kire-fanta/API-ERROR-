@@ -43,12 +43,12 @@ public class SolutionController {
 
     }
 
-    @DeleteMapping("/delete/{id}")
+    /*@DeleteMapping("/delete/{id}")
     public String delete(@PathVariable Long id){
      solutionService.supprimer(id);
         return "Supprimer avec succès";
-
-    }
+        }
+*/
 
     @PostMapping("/ajouter/{email}/{password}/{titre}")
     public String ajouter( @RequestBody Solution solution, @PathVariable String email ,@PathVariable String password ,@PathVariable  String titre){
@@ -63,7 +63,7 @@ public class SolutionController {
 
             //recuperer l'id de l'utilisateur qui a posté le probleme
 
-            long id_userProbleme = problemeService.trouverProblemeParId(idPro).getUser().getId();
+            Long id_userProbleme = problemeService.trouverProblemeParId(idPro).getUser().getId();
 
             //Recuperer le compte de l'utilisateur qui veut résoudre le probleme par son email
          user user1 = userService.trouverCompteParEmail(email);
@@ -73,7 +73,7 @@ public class SolutionController {
             //Long id_useSolution = userService.trouverUserParCompte(compte);
             //si email et password de l'user sont corrects
 
-            int id_useSolution = user1.getId();
+            Long id_useSolution = user1.getId();
 
             if(userService.Connexion(email, password) && id_userProbleme == id_useSolution){
 

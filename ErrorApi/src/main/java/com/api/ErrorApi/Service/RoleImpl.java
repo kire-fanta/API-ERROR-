@@ -24,7 +24,7 @@ public class RoleImpl implements Role{
     }
 
     @Override
-    public Optional<role> findRole(int id) {
+    public Optional<role> findRole(Long id) {
         return rp.findById(id);
     }
 }
